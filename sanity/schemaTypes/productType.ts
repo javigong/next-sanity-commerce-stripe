@@ -25,6 +25,9 @@ export const productType = defineType({
       name: 'slug',
       type: 'slug',
       title: 'Product Slug',
+      options: {
+        source: 'name',
+      },
     }),
     defineField({
       name: 'price',
