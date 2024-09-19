@@ -3,9 +3,9 @@ import imageUrlBuilder from '@sanity/image-url'
 import { SanityImageSource } from "@sanity/image-url/lib/types/types";
 
 export const client = createClient({
-  projectId: process.env.PROJECT_ID,
-  dataset: process.env.DATASET,
-  apiVersion: process.env.API_VERSION, // https://www.sanity.io/docs/api-versioning
+  projectId: process.env.NEXT_PUBLIC_PROJECT_ID!,
+  dataset: process.env.NEXT_PUBLIC_DATASET!,
+  apiVersion: process.env.NEXT_PUBLIC_API_VERSION!, // https://www.sanity.io/docs/api-versioning
   useCdn: true, // Set to false if statically generating pages, using ISR or tag-based revalidation
   // stega: {
   //   enabled: process.env.NEXT_PUBLIC_VERCEL_ENV === "preview",
