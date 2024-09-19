@@ -1,5 +1,6 @@
 "use client";
 
+import { Button } from "@/components/ui/button";
 import {
   Sheet,
   SheetContent,
@@ -10,8 +11,14 @@ import Image from "next/image";
 import { useShoppingCart } from "use-shopping-cart";
 
 export function ShoppingCartModal() {
-  const { cartCount, shouldDisplayCart, handleCartClick, cartDetails, removeItem } =
-    useShoppingCart();
+  const {
+    cartCount,
+    shouldDisplayCart,
+    handleCartClick,
+    cartDetails,
+    removeItem,
+    totalPrice,
+  } = useShoppingCart();
 
   return (
     <Sheet open={shouldDisplayCart} onOpenChange={() => handleCartClick()}>
@@ -55,7 +62,7 @@ export function ShoppingCartModal() {
                           <div className="flex">
                             <button
                               type="button"
-                              onClick={()=> removeItem(item.id)}
+                              onClick={() => removeItem(item.id)}
                               className="font-medium text-primary hover:text-primary/80"
                             >
                               Remove
@@ -68,6 +75,32 @@ export function ShoppingCartModal() {
                 </>
               )}
             </ul>
+          </div>
+
+          <div className="border-t border-gray-200 px-4 py-6 sm:px-6">
+            <div className="flex justify-between text-base font-medium text-gray-800">
+              <p>Subtotal:</p>
+              <p>${totalPrice}</p>
+            </div>
+            <p className="mt-0.5 text-sm text-gray-500">
+              Shipping and taxes are calculated at checkout.
+            </p>
+
+            <div className="mt-6">
+              <Button className="w-full">Checkout</Button>
+            </div>
+
+            <div className="mt-6 flex justify-center text-center text-sm text-gray-500">
+              <p>
+                OR{" "}
+                <button
+                  onClick={() => handleCartClick()}
+                  className="font-medium text-primary hover:text-primary/80"
+                >
+                  Continue Shopping
+                </button>
+              </p>
+            </div>
           </div>
         </div>
       </SheetContent>
