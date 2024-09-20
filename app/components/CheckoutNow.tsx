@@ -15,8 +15,12 @@ export default function CheckoutNow({
 }: ProductCart) {
   const { checkoutSingleItem } = useShoppingCart();
 
-  function buyNow(priceId: string) {
-    checkoutSingleItem(priceId);
+  async function buyNow(priceId: string) {
+    try {
+      await checkoutSingleItem(priceId);
+    } catch (error) {
+      console.error(error);
+    }
   }
 
   const product = {
@@ -29,7 +33,8 @@ export default function CheckoutNow({
   };
 
   return (
-    <Button variant={"outline"}
+    <Button
+      variant={"outline"}
       onClick={() => {
         buyNow(product.price_id);
       }}

@@ -25,10 +25,7 @@ export function ShoppingCartModal() {
   async function handleCheckoutClick(event: React.MouseEvent) {
     event.preventDefault();
     try {
-      const result = await redirectToCheckout();
-      if (result?.error) {
-        console.log("result");
-      }
+      await redirectToCheckout();
     } catch (error) {
       console.log(error);
     }
