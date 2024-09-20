@@ -29,7 +29,7 @@ export default function CheckoutNow({
   };
 
   return (
-    <Button variant={"secondary"}
+    <Button variant={"outline"}
       onClick={() => {
         buyNow(product.price_id);
       }}
