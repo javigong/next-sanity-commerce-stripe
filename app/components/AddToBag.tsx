@@ -9,17 +9,17 @@ export interface ProductCart {
   name: string;
   description: string;
   price: number;
+  price_id: string;
   currency: string;
   image: SanityImageSource;
-  sku: string;
 }
 export default function AddToBag({
   name,
   description,
   price,
+  price_id,
   currency,
   image,
-  sku,
 }: ProductCart) {
   const { addItem, handleCartClick } = useShoppingCart();
 
@@ -27,8 +27,8 @@ export default function AddToBag({
     name,
     description,
     price,
+    price_id,
     currency,
-    sku,
     image: urlFor(image).url(),
   }
 
