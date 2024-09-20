@@ -13,12 +13,12 @@ export default function CartProvider({ children }: { children: ReactNode }) {
       stripe={process.env.NEXT_PUBLIC_STRIPE_KEY as string}
       successUrl={
         env === "production"
-          ? `${process.env.VERCEL_URL}/stripe/success`
+          ? `https://${process.env.VERCEL_URL}/stripe/success`
           : "http://localhost:3000/stripe/success"
       }
       cancelUrl={
         env === "production"
-          ? `${process.env.VERCEL_URL}/stripe/error`
+          ? `https://${process.env.VERCEL_URL}/stripe/error`
           : "http://localhost:3000/stripe/error"
       }
       currency="USD"
