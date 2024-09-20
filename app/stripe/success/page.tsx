@@ -1,12 +1,8 @@
-"use client";
-
 import { Button } from "@/components/ui/button";
 import { CheckCheck } from "lucide-react";
 import Link from "next/link";
-import { useShoppingCart } from "use-shopping-cart";
 
 export default function StripeSuccess() {
-  const { clearCart } = useShoppingCart();
 
   return (
     <div className="h-screen">
@@ -19,7 +15,7 @@ export default function StripeSuccess() {
           <p className="text-gray-600 my-2">Thank you for your purchase.</p>
           <p>We hope you enjoy it!</p>
 
-          <Button asChild className="mt-5" onClick={clearCart()}>
+          <Button asChild className="mt-5">
             <Link href={"/"}>Go Back</Link>
           </Button>
         </div>
