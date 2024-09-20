@@ -12,6 +12,29 @@ SanityCommerce is a modern and performant full-stack e-commerce website built wi
 - **Shadcn UI**: Accessible and customizable UI components for an enhanced user experience.
 - **Shopping Cart**: Powered by [use-shopping-cart](https://useshoppingcart.com/), a lightweight, secure, and easy-to-implement shopping cart library.
 
+## Screenshots
+
+![Homepage Screenshot](https://github.com/user-attachments/assets/cc7274f2-f253-415b-ae50-2c94cdb17e08)
+*Homepage, hero*
+<br/><br/>
+![captures_chrome-capture-2024-8-19 (1)](https://github.com/user-attachments/assets/b62f4040-af5f-4ff9-9b90-e58d4995912e)
+*Homepage, newer products*
+<br/><br/>
+![captures_chrome-capture-2024-8-19 (2)](https://github.com/user-attachments/assets/b4155373-cd6e-4932-bf21-33c690f0bc1a)
+*Product detail page*
+<br/><br/>
+![captures_chrome-capture-2024-8-19 (3)](https://github.com/user-attachments/assets/5372e170-9f2c-46ed-9e89-37c8df2e98b4)
+*Shopping cart*
+<br/><br/>
+![captures_chrome-capture-2024-8-19 (4)](https://github.com/user-attachments/assets/8f62f144-ae46-4121-9852-88a6d8ebb6b0)
+*Stripe checkout*
+<br/><br/>
+![captures_chrome-capture-2024-8-19 (5)](https://github.com/user-attachments/assets/3bb77707-f023-4fad-8c55-aa500b014548)
+*Sanity Studio, vision*
+<br/><br/>
+![captures_chrome-capture-2024-8-19 (6)](https://github.com/user-attachments/assets/00e55115-efe5-42ec-a490-636ff58eeebb)
+*Sanity Studio, structure*
+
 ## Demo
 
 [Live Demo](https://sanity-commerce-javigong.vercel.app/)
