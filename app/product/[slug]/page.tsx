@@ -1,4 +1,5 @@
 import AddToBag from "@/app/components/AddToBag";
+import CheckoutNow from "@/app/components/CheckoutNow";
 import ImageGallery from "@/app/components/ImageGallery";
 import { fullProduct } from "@/app/lib/interface";
 import { client } from "@/app/lib/sanity";
@@ -10,6 +11,7 @@ async function getData(slug: string) {
     _id,
     images,
     price,
+    price_id,
     name,
     description,
     "slug": slug.current,
@@ -79,11 +81,20 @@ export default async function ProductPage({
                 name={data.name}
                 description={data.description}
                 price={data.price}
+                price_id={data.price_id}
                 currency={"USD"}
                 image={data.images[0]}
-                sku={data._id}
+                key={data._id}
               />
-              <Button variant={"secondary"}>Checkout Now</Button>
+              <CheckoutNow
+                name={data.name}
+                description={data.description}
+                price={data.price}
+                price_id={data.price_id}
+                currency={"USD"}
+                image={data.images[0]}
+                key={data._id}
+              />
             </div>
 
             <p className="mt-12 text-base text-gray-500 tracking-wide">

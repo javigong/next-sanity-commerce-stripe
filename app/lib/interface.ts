@@ -12,6 +12,7 @@ export interface fullProduct {
   _id: string;
   images: SanityImageSource[];
   price: number;
+  price_id: string;
   name: string;
   description: string;
   slug: string;
