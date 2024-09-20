@@ -8,6 +8,7 @@ import {
   SheetTitle,
 } from "@/components/ui/sheet";
 import Image from "next/image";
+import React from "react";
 import { useShoppingCart } from "use-shopping-cart";
 
 export function ShoppingCartModal() {
@@ -21,7 +22,7 @@ export function ShoppingCartModal() {
     redirectToCheckout,
   } = useShoppingCart();
 
-  async function handleCheckoutClick(event: any) {
+  async function handleCheckoutClick(event: React.MouseEvent) {
     event.preventDefault();
     try {
       const result = await redirectToCheckout();
